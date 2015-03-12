@@ -1,0 +1,639 @@
+ID,Name,Type,Faction,Influence,Agenda
+01001,"Noise: Hacker Extraordinaire",Identity,Anarch,15,0
+01002,"Déjà  Vu",Event,Anarch,2,0
+01003,"Demolition Run",Event,Anarch,2,0
+01004,"Stimhack",Event,Anarch,1,0
+01005,"Cyberfeeder",Hardware,Anarch,1,0
+01006,"Grimoire",Hardware,Anarch,2,0
+01007,"Corroder",Program,Anarch,2,0
+01008,"Datasucker",Program,Anarch,1,0
+01009,"Djinn",Program,Anarch,2,0
+01010,"Medium",Program,Anarch,3,0
+01011,"Mimic",Program,Anarch,1,0
+01012,"Parasite",Program,Anarch,2,0
+01013,"Wyrm",Program,Anarch,2,0
+01014,"Yog.0",Program,Anarch,1,0
+01015,"Ice Carver",Resource,Anarch,3,0
+01016,"Wyldside",Resource,Anarch,3,0
+01017,"Gabriel Santiago: Consummate Professional",Identity,Criminal,15,0
+01018,"Account Siphon",Event,Criminal,4,0
+01019,"Easy Mark",Event,Criminal,1,0
+01020,"Forged Activation Orders",Event,Criminal,2,0
+01021,"Inside Job",Event,Criminal,3,0
+01022,"Special Order",Event,Criminal,2,0
+01023,"Lemuria Codecracker",Hardware,Criminal,1,0
+01024,"Desperado",Hardware,Criminal,3,0
+01025,"Aurora",Program,Criminal,1,0
+01026,"Femme Fatale",Program,Criminal,1,0
+01027,"Ninja",Program,Criminal,2,0
+01028,"Sneakdoor Beta",Program,Criminal,3,0
+01029,"Bank Job",Resource,Criminal,2,0
+01030,"Crash Space",Resource,Criminal,2,0
+01031,"Data Dealer",Resource,Criminal,2,0
+01032,"Decoy",Resource,Criminal,2,0
+01033,"Kate ""Mac"" McCaffrey: Digital Tinker",Identity,Shaper,15,0
+01034,"Diesel",Event,Shaper,2,0
+01035,"Modded",Event,Shaper,2,0
+01036,"The Maker's Eye",Event,Shaper,2,0
+01037,"Tinkering",Event,Shaper,4,0
+01038,"Akamatsu Mem Chip",Hardware,Shaper,1,0
+01039,"Rabbit Hole",Hardware,Shaper,1,0
+01040,"The Personal Touch",Hardware,Shaper,2,0
+01041,"The Toolbox",Hardware,Shaper,2,0
+01042,"Battering Ram",Program,Shaper,2,0
+01043,"Gordian Blade",Program,Shaper,3,0
+01044,"Magnum Opus",Program,Shaper,2,0
+01045,"Net Shield",Program,Shaper,1,0
+01046,"Pipeline",Program,Shaper,1,0
+01047,"Aesop's Pawnshop",Resource,Shaper,2,0
+01048,"Sacrificial Construct",Resource,Shaper,1,0
+01049,"Infiltration",Event,Neutral,0,0
+01050,"Sure Gamble",Event,Neutral,0,0
+01051,"Crypsis",Program,Neutral,0,0
+01052,"Access to Globalsec",Resource,Neutral,0,0
+01053,"Armitage Codebusting",Resource,Neutral,0,0
+01054,"Haas-Bioroid: Engineering the Future",Identity,HaasBioroid,15,0
+01055,"Accelerated Beta Test",Agenda,HaasBioroid,0,2
+01056,"Adonis Campaign",Asset,HaasBioroid,2,0
+01057,"Aggressive Secretary",Asset,HaasBioroid,2,0
+01058,"Archived Memories",Operation,HaasBioroid,2,0
+01059,"Biotic Labor",Operation,HaasBioroid,4,0
+01060,"Shipment from MirrorMorph",Operation,HaasBioroid,2,0
+01061,"Heimdall 1.0",ICE,HaasBioroid,2,0
+01062,"Ichi 1.0",ICE,HaasBioroid,2,0
+01063,"Viktor 1.0",ICE,HaasBioroid,2,0
+01064,"Rototurret",ICE,HaasBioroid,1,0
+01065,"Corporate Troubleshooter",Upgrade,HaasBioroid,1,0
+01066,"Experiential Data",Upgrade,HaasBioroid,1,0
+01067,"Jinteki: Personal Evolution",Identity,Jinteki,15,0
+01068,"Nisei MK II",Agenda,Jinteki,0,2
+01069,"Project Junebug",Asset,Jinteki,1,0
+01070,"Snare!",Asset,Jinteki,2,0
+01071,"Zaibatsu Loyalty",Asset,Jinteki,1,0
+01072,"Neural EMP",Operation,Jinteki,2,0
+01073,"Precognition",Operation,Jinteki,3,0
+01074,"Cell Portal",ICE,Jinteki,2,0
+01075,"Chum",ICE,Jinteki,1,0
+01076,"Data Mine",ICE,Jinteki,2,0
+01077,"Neural Katana",ICE,Jinteki,2,0
+01078,"Wall of Thorns",ICE,Jinteki,1,0
+01079,"Akitaro Watanabe",Upgrade,Jinteki,2,0
+01080,"NBN: Making News",Identity,NBN,15,0
+01081,"AstroScript Pilot Program",Agenda,NBN,0,2
+01082,"Breaking News",Agenda,NBN,0,1
+01083,"Anonymous Tip",Operation,NBN,1,0
+01084,"Closed Accounts",Operation,NBN,1,0
+01085,"Psychographics",Operation,NBN,3,0
+01086,"SEA Source",Operation,NBN,2,0
+01087,"Ghost Branch",Asset,NBN,1,0
+01088,"Data Raven",ICE,NBN,2,0
+01089,"Matrix Analyzer",ICE,NBN,2,0
+01090,"Tollbooth",ICE,NBN,2,0
+01091,"Red Herrings",Upgrade,NBN,2,0
+01092,"SanSan City Grid",Upgrade,NBN,3,0
+01093,"Weyland Consortium: Building a Better World",Identity,Weyland,15,0
+01094,"Hostile Takeover",Agenda,Weyland,0,1
+01095,"Posted Bounty",Agenda,Weyland,0,1
+01096,"Security Subcontract",Asset,Weyland,1,0
+01097,"Aggressive Negotiation",Operation,Weyland,1,0
+01098,"Beanstalk Royalties",Operation,Weyland,1,0
+01099,"Scorched Earth",Operation,Weyland,4,0
+01100,"Shipment from Kaguya",Operation,Weyland,1,0
+01101,"Archer",ICE,Weyland,2,0
+01102,"Hadrian's Wall",ICE,Weyland,3,0
+01103,"Ice Wall",ICE,Weyland,1,0
+01104,"Shadow",ICE,Weyland,1,0
+01105,"Research Station",Upgrade,Weyland,1,0
+01106,"Priority Requisition",Agenda,Neutral,0,3
+01107,"Private Security Force",Agenda,Neutral,0,2
+01108,"Melange Mining Corp.",Asset,Neutral,0,0
+01109,"PAD Campaign",Asset,Neutral,0,0
+01110,"Hedge Fund",Operation,Neutral,0,0
+01111,"Enigma",ICE,Neutral,0,0
+01112,"Hunter",ICE,Neutral,0,0
+01113,"Wall of Static",ICE,Neutral,0,0
+02001,"Whizzard: Master Gamer",Identity,Anarch,15,0
+02002,"Spinal Modem",Hardware,Anarch,2,0
+02003,"Imp",Program,Anarch,3,0
+02004,"Morning Star",Program,Anarch,4,0
+02005,"Cortez Chip",Hardware,Criminal,2,0
+02006,"Peacock",Program,Criminal,2,0
+02007,"ZU.13 Key Master",Program,Shaper,2,0
+02008,"The Helpful AI",Resource,Shaper,2,0
+02009,"Plascrete Carapace",Hardware,Neutral,0,0
+02010,"Haas-Bioroid: Stronger Together",Identity,HaasBioroid,15,0
+02011,"Mandatory Upgrades",Agenda,HaasBioroid,0,2
+02012,"Janus 1.0",ICE,HaasBioroid,3,0
+02013,"Ash 2X3ZB9CY",Upgrade,HaasBioroid,2,0
+02014,"Braintrust",Agenda,Jinteki,0,2
+02015,"Snowflake",ICE,Jinteki,2,0
+02016,"Restructured Datapool",Agenda,NBN,0,3
+02017,"TMI",ICE,NBN,1,0
+02018,"Project Atlas",Agenda,Weyland,0,2
+02019,"Caduceus",ICE,Weyland,2,0
+02020,"Dracō",ICE,Neutral,0,0
+02021,"Vamp",Event,Anarch,2,0
+02022,"Liberated Account",Resource,Anarch,2,0
+02023,"Satellite Uplink",Event,Criminal,3,0
+02024,"e3 Feedback Implants",Hardware,Criminal,2,0
+02025,"Compromised Employee",Resource,Criminal,1,0
+02026,"Notoriety",Event,Shaper,1,0
+02027,"Snowball",Program,Shaper,2,0
+02028,"Dyson Mem Chip",Hardware,Neutral,0,0
+02029,"Encryption Protocol",Asset,HaasBioroid,1,0
+02030,"Sherlock 1.0",ICE,HaasBioroid,2,0
+02031,"Jinteki: Replicating Perfection",Identity,Jinteki,15,0
+02032,"Fetal AI",Agenda,Jinteki,0,2
+02033,"Trick of Light",Operation,Jinteki,3,0
+02034,"Sensei",ICE,Jinteki,1,0
+02035,"Big Brother",Operation,NBN,1,0
+02036,"ChiLo City Grid",Upgrade,NBN,2,0
+02037,"Power Grid Overload",Operation,Weyland,1,0
+02038,"Amazon Industrial Zone",Upgrade,Weyland,1,0
+02039,"Executive Retreat",Agenda,Neutral,0,3
+02040,"Freelancer",Operation,Neutral,0,0
+02041,"Nerve Agent",Program,Anarch,2,0
+02042,"Joshua B.",Resource,Anarch,3,0
+02043,"Emergency Shutdown",Event,Criminal,2,0
+02044,"Muresh Bodysuit",Hardware,Criminal,1,0
+02045,"Snitch",Program,Criminal,2,0
+02046,"Chaos Theory: Wà¼nderkind",Identity,Shaper,15,0
+02047,"Test Run",Event,Shaper,3,0
+02048,"Dinosaurus",Hardware,Shaper,2,0
+02049,"Personal Workshop",Resource,Shaper,4,0
+02050,"Public Sympathy",Resource,Neutral,0,0
+02051,"Project Vitruvius",Agenda,HaasBioroid,0,2
+02052,"Viper",ICE,HaasBioroid,1,0
+02053,"Edge of World",Asset,Jinteki,2,0
+02054,"Sunset",Operation,Jinteki,1,0
+02055,"Marked Accounts",Asset,NBN,1,0
+02056,"Pop-up Window",ICE,NBN,1,0
+02057,"Woodcutter",ICE,Weyland,3,0
+02058,"Commercialization",Operation,Weyland,1,0
+02059,"Private Contracts",Asset,Neutral,0,0
+02060,"Chimera",ICE,Neutral,0,0
+02061,"Disrupter",Program,Anarch,1,0
+02062,"Force of Nature",Program,Anarch,1,0
+02063,"Scrubber",Resource,Anarch,1,0
+02064,"Doppelgà¤nger",Hardware,Criminal,2,0
+02065,"Crescentus",Program,Criminal,1,0
+02066,"Deus X",Program,Shaper,1,0
+02067,"All-nighter",Resource,Shaper,2,0
+02068,"Inside Man",Resource,Neutral,0,0
+02069,"Underworld Contact",Resource,Neutral,0,0
+02070,"Green Level Clearance",Operation,HaasBioroid,1,0
+02071,"Hourglass",ICE,HaasBioroid,2,0
+02072,"Dedicated Server",Asset,Jinteki,2,0
+02073,"Bullfrog",ICE,Jinteki,2,0
+02074,"Uroboros",ICE,NBN,2,0
+02075,"Net Police",Asset,NBN,2,0
+02076,"Weyland Consortium: Because We Built It",Identity,Weyland,15,0
+02077,"Government Contracts",Agenda,Weyland,0,3
+02078,"Tyrant",ICE,Weyland,2,0
+02079,"Oversight AI",Operation,Weyland,2,0
+02080,"False Lead",Agenda,Neutral,0,1
+02081,"Surge",Event,Anarch,1,0
+02082,"Xanadu",Resource,Anarch,2,0
+02083,"Andromeda: Dispossessed Ristie",Identity,Criminal,15,0
+02084,"Networking",Event,Criminal,1,0
+02085,"HQ Interface",Hardware,Criminal,2,0
+02086,"Pheromones",Program,Criminal,2,0
+02087,"Quality Time",Event,Shaper,1,0
+02088,"Replicator",Hardware,Shaper,2,0
+02089,"Creeper",Program,Shaper,1,0
+02090,"Kraken",Event,Neutral,0,0
+02091,"Kati Jones",Resource,Neutral,0,0
+02092,"Eve Campaign",Asset,HaasBioroid,3,0
+02093,"Rework",Operation,HaasBioroid,1,0
+02094,"Whirlpool",ICE,Jinteki,2,0
+02095,"Hokusai Grid",Upgrade,Jinteki,2,0
+02096,"Data Hound",ICE,NBN,1,0
+02097,"Bernice Mai",Upgrade,NBN,2,0
+02098,"Salvage",ICE,Weyland,2,0
+02099,"Simone Diego",Upgrade,Weyland,2,0
+02100,"Foxfire",Operation,Neutral,0,0
+02101,"Retrieval Run",Event,Anarch,2,0
+02102,"Darwin",Program,Anarch,3,0
+02103,"Data Leak Reversal",Resource,Anarch,1,0
+02104,"Faerie",Program,Criminal,3,0
+02105,"Mr. Li",Resource,Criminal,2,0
+02106,"Indexing",Event,Shaper,3,0
+02107,"R&D Interface",Hardware,Shaper,2,0
+02108,"Deep Thought",Program,Shaper,2,0
+02109,"New Angeles City Hall",Resource,Neutral,0,0
+02110,"Eli 1.0",ICE,HaasBioroid,1,0
+02111,"Ruhr Valley",Upgrade,HaasBioroid,3,0
+02112,"Ronin",Asset,Jinteki,4,0
+02113,"Midori",Upgrade,Jinteki,3,0
+02114,"NBN: The World is Yours*",Identity,NBN,12,0
+02115,"Project Beale",Agenda,NBN,0,2
+02116,"Midseason Replacements",Operation,NBN,4,0
+02117,"Flare",ICE,NBN,3,0
+02118,"Dedicated Response Team",Asset,Weyland,3,0
+02119,"Burke Bugs",ICE,Weyland,1,0
+02120,"Corporate War",Agenda,Neutral,0,2
+03001,"Cerebral Imaging: Infinite Frontiers",Identity,HaasBioroid,15,0
+03002,"Custom Biotics: Engineered for Success",Identity,HaasBioroid,22,0
+03003,"NEXT Design: Guarding the Net",Identity,HaasBioroid,12,0
+03004,"Director Haas' Pet Project",Agenda,HaasBioroid,0,1
+03005,"Efficiency Committee",Agenda,HaasBioroid,0,2
+03006,"Project Wotan",Agenda,HaasBioroid,0,3
+03007,"Sentinel Defense Program",Agenda,HaasBioroid,0,2
+03008,"Alix T4LB07",Asset,HaasBioroid,1,0
+03009,"Cerebral Overwriter",Asset,HaasBioroid,2,0
+03010,"Director Haas",Asset,HaasBioroid,5,0
+03011,"Haas Arcology AI",Asset,HaasBioroid,4,0
+03012,"Thomas Haas",Asset,HaasBioroid,1,0
+03013,"Bioroid Efficiency Research",Operation,HaasBioroid,2,0
+03014,"Successful Demonstration",Operation,HaasBioroid,1,0
+03015,"Heimdall 2.0",ICE,HaasBioroid,3,0
+03016,"Howler",ICE,HaasBioroid,1,0
+03017,"Ichi 2.0",ICE,HaasBioroid,3,0
+03018,"Minelayer",ICE,HaasBioroid,1,0
+03019,"Viktor 2.0",ICE,HaasBioroid,3,0
+03020,"Zed 1.0",ICE,HaasBioroid,2,0
+03021,"Awakening Center",Upgrade,HaasBioroid,1,0
+03022,"Tyr's Hand",Upgrade,HaasBioroid,1,0
+03023,"Gila Hands Arcology",Agenda,Neutral,0,1
+03024,"Levy University",Asset,Neutral,0,0
+03025,"Server Diagnostics",Asset,Neutral,0,0
+03026,"Bastion",ICE,Neutral,0,0
+03027,"Datapike",ICE,Neutral,0,0
+03028,"Rielle ""Kit"" Peddler: Transhuman",Identity,Shaper,10,0
+03029,"The Professor: Keeper of Knowledge",Identity,Shaper,1,0
+03030,"Exile: Streethawk",Identity,Shaper,15,0
+03031,"Escher",Event,Shaper,5,0
+03032,"Exploratory Romp",Event,Shaper,2,0
+03033,"Freelance Coding Contract",Event,Shaper,1,0
+03034,"Scavenge",Event,Shaper,2,0
+03035,"Levy AR Lab Access",Event,Shaper,3,0
+03036,"Monolith",Hardware,Shaper,3,0
+03037,"Feedback Filter",Hardware,Shaper,1,0
+03038,"Clone Chip",Hardware,Shaper,2,0
+03039,"Omni-Drive",Hardware,Shaper,3,0
+03040,"Atman",Program,Shaper,3,0
+03041,"Cloak",Program,Shaper,2,0
+03042,"Dagger",Program,Shaper,2,0
+03043,"Chakana",Program,Shaper,2,0
+03044,"Cyber-Cypher",Program,Shaper,3,0
+03045,"Paricia",Program,Shaper,1,0
+03046,"Self-modifying Code",Program,Shaper,3,0
+03047,"Sahasrara",Program,Shaper,2,0
+03048,"Inti",Program,Shaper,1,0
+03049,"Professional Contacts",Resource,Shaper,2,0
+03050,"Borrowed Satellite",Resource,Shaper,2,0
+03051,"Ice Analyzer",Resource,Shaper,1,0
+03052,"Dirty Laundry",Event,Neutral,0,0
+03053,"Daily Casts",Resource,Neutral,0,0
+03054,"Same Old Thing",Resource,Neutral,0,0
+03055,"The Source",Resource,Neutral,2,0
+04001,"Frame Job",Event,Anarch,2,0
+04002,"Pawn",Program,Anarch,1,0
+04003,"Rook",Program,Anarch,2,0
+04004,"Hostage",Event,Criminal,2,0
+04005,"Gorman Drip v1",Program,Criminal,1,0
+04006,"Lockpick",Hardware,Shaper,3,0
+04007,"False Echo",Program,Shaper,2,0
+04008,"Motivation",Resource,Shaper,1,0
+04009,"John Masanori",Resource,Neutral,0,0
+04010,"Project Ares",Agenda,HaasBioroid,0,2
+04011,"NEXT Bronze",ICE,HaasBioroid,2,0
+04012,"Celebrity Gift",Operation,Jinteki,3,0
+04013,"Himitsu-Bako",ICE,Jinteki,2,0
+04014,"Character Assassination",Agenda,NBN,0,2
+04015,"Jackson Howard",Asset,NBN,1,0
+04016,"Invasion of Privacy",Operation,NBN,3,0
+04017,"Geothermal Fracking",Agenda,Weyland,0,2
+04018,"Swarm",ICE,Weyland,4,0
+04019,"Cyberdex Trial",Operation,Neutral,0,0
+04020,"Grim",ICE,Neutral,0,0
+04021,"Bishop",Program,Anarch,2,0
+04022,"Scheherazade",Program,Anarch,1,0
+04023,"Hard at Work",Resource,Anarch,2,0
+04024,"Recon",Event,Criminal,2,0
+04025,"Copycat",Program,Criminal,1,0
+04026,"Leviathan",Program,Criminal,2,0
+04027,"Eureka!",Event,Shaper,1,0
+04028,"Record Reconstructor",Hardware,Shaper,1,0
+04029,"Prepaid VoicePAD",Hardware,Neutral,0,0
+04030,"Wotan",ICE,HaasBioroid,5,0
+04031,"Hellion Alpha Test",Operation,HaasBioroid,3,0
+04032,"Clone Retirement",Agenda,Jinteki,0,1
+04033,"Swordsman",ICE,Jinteki,1,0
+04034,"Shipment from SanSan",Operation,NBN,1,0
+04035,"Muckraker",ICE,NBN,3,0
+04036,"The Cleaners",Agenda,Weyland,0,3
+04037,"Elizabeth Mills",Asset,Weyland,2,0
+04038,"Off the Grid",Upgrade,Weyland,3,0
+04039,"Profiteering",Agenda,Neutral,0,1
+04040,"Restructure",Operation,Neutral,0,0
+04041,"Reina Roja: Freedom Fighter",Identity,Anarch,15,0
+04042,"Deep Red",Hardware,Anarch,1,0
+04043,"Knight",Program,Anarch,2,0
+04044,"Running Interference",Event,Criminal,4,0
+04045,"Expert Schedule Analyzer",Program,Criminal,2,0
+04046,"Grifter",Resource,Criminal,1,0
+04047,"Torch",Program,Shaper,4,0
+04048,"Woman in the Red Dress",Resource,Shaper,4,0
+04049,"Raymond Flint",Resource,Neutral,0,0
+04050,"Isabel McGuire",Asset,HaasBioroid,1,0
+04051,"Hudson 1.0",ICE,HaasBioroid,1,0
+04052,"Accelerated Diagnostics",Operation,HaasBioroid,1,0
+04053,"Unorthodox Predictions",Agenda,Jinteki,0,1
+04054,"Sundew",Asset,Jinteki,3,0
+04055,"City Surveillance",Asset,NBN,4,0
+04056,"Snoop",ICE,NBN,2,0
+04057,"Ireress",ICE,Weyland,1,0
+04058,"Power Shutdown",Operation,Weyland,2,0
+04059,"Paper Wall",ICE,Neutral,0,0
+04060,"Interns",Operation,Neutral,0,0
+04061,"Keyhole",Program,Anarch,3,0
+04062,"Activist Support",Resource,Anarch,2,0
+04063,"Lawyer Up",Event,Criminal,1,0
+04064,"Leverage",Event,Criminal,2,0
+04065,"Garrote",Program,Criminal,3,0
+04066,"LLDS Processor",Hardware,Shaper,1,0
+04067,"Sharpshooter",Program,Shaper,1,0
+04068,"Capstone",Hardware,Shaper,3,0
+04069,"Starlight Crusade Funding",Resource,Neutral,0,0
+04070,"Rex Campaign",Asset,HaasBioroid,2,0
+04071,"Fenris",ICE,HaasBioroid,2,0
+04072,"Panic Button",Upgrade,HaasBioroid,1,0
+04073,"Shock!",Asset,Jinteki,2,0
+04074,"Tsurugi",ICE,Jinteki,2,0
+04075,"TGTBT",Agenda,NBN,0,1
+04076,"Sweeps Week",Operation,NBN,2,0
+04077,"RSVP",ICE,NBN,2,0
+04078,"Curtain Wall",ICE,Weyland,2,0
+04079,"Punitive Counterstrike",Operation,Weyland,2,0
+04080,"Veterans Program",Agenda,Neutral,0,1
+04081,"Quest Completed",Event,Anarch,2,0
+04082,"Hemorrhage",Program,Anarch,4,0
+04083,"Tallie Perrault",Resource,Anarch,3,0
+04084,"Executive Wiretaps",Event,Criminal,3,0
+04085,"Blackguard",Hardware,Criminal,2,0
+04086,"CyberSolutions Mem Chip",Hardware,Shaper,2,0
+04087,"Alpha",Program,Shaper,3,0
+04088,"Omega",Program,Shaper,3,0
+04089,"Blackmail",Event,Neutral,0,0
+04090,"Blue Level Clearance",Operation,HaasBioroid,2,0
+04091,"Strongbox",Upgrade,HaasBioroid,2,0
+04092,"Toshiyuki Sakai",Asset,Jinteki,2,0
+04093,"Yagura",ICE,Jinteki,2,0
+04094,"Restoring Face",Operation,Jinteki,2,0
+04095,"Market Research",Agenda,NBN,0,2
+04096,"Wraparound",ICE,NBN,1,0
+04097,"GRNDL: Power Unleashed",Identity,Weyland,10,0
+04098,"Vulcan Coverup",Agenda,Weyland,0,1
+04099,"GRNDL Refinery",Asset,Weyland,2,0
+04100,"Subliminal Messaging",Operation,Neutral,0,0
+04101,"Singularity",Event,Anarch,3,0
+04102,"Queen's Gambit",Event,Anarch,3,0
+04103,"Dyson Fractal Generator",Hardware,Anarch,3,0
+04104,"Silencer",Hardware,Criminal,3,0
+04105,"Savoir-faire",Program,Criminal,3,0
+04106,"Fall Guy",Resource,Criminal,1,0
+04107,"Power Nap",Event,Shaper,2,0
+04108,"Paintbrush",Program,Shaper,4,0
+04109,"Lucky Find",Event,Neutral,2,0
+04110,"Gyri Labyrinth",ICE,HaasBioroid,2,0
+04111,"Reclamation Order",Operation,HaasBioroid,2,0
+04112,"Broadcast Square",Asset,NBN,3,0
+04113,"Corporate Shuffle",Operation,NBN,2,0
+04114,"Caprice Nisei",Upgrade,Jinteki,4,0
+04115,"Shinobi",ICE,Jinteki,3,0
+04116,"Marker",ICE,Jinteki,1,0
+04117,"Hive",ICE,Weyland,2,0
+04118,"Witness Tampering",Operation,Weyland,1,0
+04119,"NAPD Contract",Agenda,Neutral,0,2
+04120,"Quandary",ICE,Neutral,0,0
+05001,"Harmony Medtech: Biomedical Pioneer",Identity,Jinteki,12,0
+05002,"Nisei Division: The Next Generation",Identity,Jinteki,15,0
+05003,"Tennin Institute: The Secrets Within",Identity,Jinteki,15,0
+05004,"House of Knives",Agenda,Jinteki,0,1
+05005,"Medical Breakthrough",Agenda,Jinteki,0,2
+05006,"Philotic Entanglement",Agenda,Jinteki,0,2
+05007,"The Future Perfect",Agenda,Jinteki,0,3
+05008,"Chairman Hiro",Asset,Jinteki,5,0
+05009,"Mental Health Clinic",Asset,Jinteki,2,0
+05010,"Psychic Field",Asset,Jinteki,1,0
+05011,"Shi.Kyū",Asset,Jinteki,4,0
+05012,"Tenma Line",Asset,Jinteki,3,0
+05013,"Cerebral Cast",Operation,Jinteki,3,0
+05014,"Medical Research Fundraiser",Operation,Jinteki,1,0
+05015,"Mushin No Shin",Operation,Jinteki,2,0
+05016,"Inazuma",ICE,Jinteki,2,0
+05017,"Komainu",ICE,Jinteki,4,0
+05018,"Pup",ICE,Jinteki,1,0
+05019,"Shiro",ICE,Jinteki,4,0
+05020,"Susanoo-No-Mikoto",ICE,Jinteki,3,0
+05021,"NeoTokyo Grid",Upgrade,Jinteki,2,0
+05022,"Tori Hanzō",Upgrade,Jinteki,4,0
+05023,"Plan B",Asset,Neutral,0,0
+05024,"Guard",ICE,Neutral,0,0
+05025,"Rainbow",ICE,Neutral,0,0
+05026,"Diversified Portfolio",Operation,Neutral,0,0
+05027,"Fast Track",Operation,Neutral,0,0
+05028,"Iain Stirling: Retired Spook",Identity,Criminal,10,0
+05029,"Ken ""Express"" Tenma: Disappeared Clone",Identity,Criminal,17,0
+05030,"Silhouette: Stealth Operative",Identity,Criminal,15,0
+05031,"Calling in Favors",Event,Criminal,1,0
+05032,"Early Bird",Event,Criminal,2,0
+05033,"Express Delivery",Event,Criminal,1,0
+05034,"Feint",Event,Criminal,3,0
+05035,"Legwork",Event,Criminal,2,0
+05036,"Planned Assault",Event,Criminal,2,0
+05037,"Logos",Hardware,Criminal,2,0
+05038,"Public Terminal",Hardware,Criminal,2,0
+05039,"Unregistered S&W '35",Hardware,Criminal,3,0
+05040,"Window",Hardware,Criminal,1,0
+05041,"Alias",Program,Criminal,2,0
+05042,"Breach",Program,Criminal,2,0
+05043,"Bug",Program,Criminal,1,0
+05044,"Gingerbread",Program,Criminal,2,0
+05045,"Grappling Hook",Program,Criminal,2,0
+05046,"Passport",Program,Criminal,2,0
+05047,"Push Your Luck",Event,Criminal,1,0
+05048,"Security Testing",Resource,Criminal,3,0
+05049,"Theophilius Bagbiter",Resource,Criminal,4,0
+05050,"Tri-maf Contact",Resource,Criminal,1,0
+05051,"Mass Install",Event,Neutral,0,0
+05052,"Q-Coherence Chip",Hardware,Neutral,0,0
+05053,"Overmind",Program,Neutral,0,0
+05054,"Oracle May",Resource,Neutral,1,0
+05055,"Donut Taganes",Resource,Neutral,2,0
+06001,"Domestic Sleepers",Agenda,HaasBioroid,0,0
+06002,"NEXT Silver",ICE,HaasBioroid,2,0
+06003,"Lotus Field",ICE,Jinteki,1,0
+06004,"Mutate",Operation,Jinteki,3,0
+06005,"Near-Earth Hub: Broadcast Center",Identity,NBN,17,0
+06006,"Primary Transmission Dish",Asset,NBN,2,0
+06007,"Midway Station Grid",Upgrade,NBN,4,0
+06008,"The Root",Asset,Weyland,3,0
+06009,"Taurus",ICE,Weyland,2,0
+06010,"Mother Goddess",ICE,Neutral,0,0
+06011,"Galahad",ICE,Neutral,1,0
+06012,"Bad Times",Operation,Neutral,0,0
+06013,"Cyber Threat",Event,Anarch,3,0
+06014,"Lamprey",Program,Anarch,2,0
+06015,"Paper Tripping",Event,Criminal,2,0
+06016,"Power Tap",Resource,Criminal,1,0
+06017,"Nasir Meidan: Cyber Explorer",Identity,Shaper,15,0
+06018,"Social Engineering",Event,Shaper,2,0
+06019,"Leprechaun",Program,Shaper,2,0
+06020,"Eden Shard",Resource,Neutral,1,0
+06021,"The Foundry: Refining the Process",Identity,HaasBioroid,15,0
+06022,"Enhanced Login Protocol",Operation,HaasBioroid,2,0
+06023,"Heinlein Grid",Upgrade,HaasBioroid,2,0
+06024,"Encrypted Portals",Agenda,Jinteki,0,1
+06025,"Cerebral Static",Operation,Jinteki,2,0
+06026,"Targeted Marketing",Operation,NBN,1,0
+06027,"Information Overload",ICE,NBN,2,0
+06028,"Paywall Implementation",Operation,Weyland,2,0
+06029,"Sealed Vault",Asset,Weyland,1,0
+06030,"Eden Fragment",Agenda,Neutral,0,3
+06031,"Lag Time",Operation,Neutral,0,0
+06032,"Will-o'-the-Wisp",Upgrade,Neutral,0,0
+06033,"D4v1d",Program,Anarch,4,0
+06034,"Scrubbed",Event,Anarch,2,0
+06035,"Three Steps Ahead",Event,Criminal,2,0
+06036,"Unscheduled Maintenance",Event,Criminal,2,0
+06037,"Cache",Program,Criminal,1,0
+06038,"Net Celebrity",Event,Shaper,1,0
+06039,"LLDS Energy Regulator",Program,Shaper,1,0
+06040,"Ghost Runner",Resource,Neutral,0,0
+06041,"IQ",ICE,HaasBioroid,2,0
+06042,"Eliza's Toybox",Asset,HaasBioroid,2,0
+06043,"Kitsune",ICE,Jinteki,2,0
+06044,"Port Anson Grid",Upgrade,Jinteki,2,0
+06045,"The News Now Hour",Asset,NBN,3,0
+06046,"Manhunt",Operation,NBN,3,0
+06047,"Wendigo",ICE,Weyland,2,0
+06048,"Crisium Grid",Upgrade,Weyland,1,0
+06049,"Chronos Project",Agenda,Neutral,0,1
+06050,"Shattered Remains",Asset,Neutral,0,0
+06051,"Lancelot",ICE,Neutral,1,0
+06052,"Quetzal: Free Spirit",Identity,Anarch,15,0
+06053,"BlacKat",Program,Anarch,3,0
+06054,"Duggar's",Resource,Anarch,4,0
+06055,"Box-E",Hardware,Criminal,1,0
+06056,"The Supplier",Resource,Criminal,2,0
+06057,"Refractor",Program,Shaper,2,0
+06058,"Order of Sol",Resource,Shaper,1,0
+06059,"Hades Shard",Resource,Neutral,1,0
+06060,"Rachel Beckman",Resource,Neutral,1,0
+06061,"Architect",ICE,HaasBioroid,2,0
+06062,"Peak Efficiency",Operation,HaasBioroid,1,0
+06063,"Labyrinthine Servers",Agenda,Jinteki,0,3
+06064,"Ashigaru",ICE,Jinteki,3,0
+06065,"Mamba",ICE,Jinteki,2,0
+06066,"Reversed Accounts",Asset,NBN,1,0
+06067,"Universal Connectivity Fee",ICE,NBN,1,0
+06068,"Blue Sun: Powering the Future",Identity,Weyland,15,0
+06069,"Changeling",ICE,Weyland,2,0
+06070,"Reuse",Operation,Weyland,1,0
+06071,"Hades Fragment",Agenda,Neutral,0,3
+06072,"Docklands Crackdown",Asset,Neutral,0,0
+06073,"Inject",Event,Anarch,2,0
+06074,"Origami",Program,Anarch,2,0
+06075,"Fester",Resource,Anarch,1,0
+06076,"Autoscripter",Hardware,Criminal,3,0
+06077,"Switchblade",Program,Criminal,2,0
+06078,"Trade-In",Event,Shaper,2,0
+06079,"Astrolabe",Hardware,Shaper,2,0
+06080,"Angel Arena",Resource,Neutral,0,0
+06081,"Bifrost Array",Agenda,HaasBioroid,0,1
+06082,"Sagittarius",ICE,HaasBioroid,2,0
+06083,"Hostile Infrastructure",Asset,Jinteki,2,0
+06084,"Gemini",ICE,Jinteki,2,0
+06085,"License Acquisition",Agenda,NBN,0,1
+06086,"Daily Business Show",Asset,NBN,1,0
+06087,"Superior Cyberwalls",Agenda,Weyland,0,1
+06088,"Executive Boot Camp",Asset,Weyland,1,0
+06089,"Lycan",ICE,Weyland,2,0
+06090,"Snatch and Grab",Operation,Neutral,0,0
+06091,"Merlin",ICE,Neutral,1,0
+06092,"Shell Corporation",Upgrade,Neutral,0,0
+06093,"Ekomind",Hardware,Anarch,3,0
+06094,"Cerberus ""Cuj.0"" H3",Program,Anarch,3,0
+06095,"Leela Patel: Trained Pragmatist",Identity,Criminal,15,0
+06096,"Cerberus ""Rex"" H2",Program,Criminal,3,0
+06097,"Zona Sul Shipping",Resource,Criminal,1,0
+06098,"Cybsoft MacroDrive",Hardware,Shaper,1,0
+06099,"Cerberus ""Lady"" H1",Program,Shaper,3,0
+06100,"Utopia Shard",Resource,Neutral,1,0
+06101,"Helium-3 Deposit",Agenda,Weyland,0,2
+06102,"Errand Boy",ICE,Weyland,1,0
+06103,"IT Department",Asset,HaasBioroid,1,0
+06104,"Markus 1.0",ICE,HaasBioroid,1,0
+06105,"Industrial Genomics: Growing Solutions",Identity,Jinteki,15,0
+06106,"Turtlebacks",Asset,Jinteki,1,0
+06107,"Shoot the Moon",Operation,NBN,2,0
+06108,"Troll",ICE,NBN,2,0
+06109,"Virgo",ICE,NBN,2,0
+06110,"Utopia Fragment",Agenda,Neutral,0,3
+06111,"Excalibur",ICE,Neutral,0,0
+06112,"Self-destruct",Upgrade,Neutral,0,0
+06113,"Incubator",Program,Anarch,3,0
+06114,"Ixodidae",Program,Anarch,2,0
+06115,"Code Siphon",Event,Shaper,4,0
+06116,"Collective Consciousness",Program,Shaper,2,0
+06117,"Sage",Program,Shaper,3,0
+06118,"Bribery",Event,Criminal,2,0
+06119,"Au Revoir",Program,Criminal,2,0
+06120,"Earthrise Hotel",Resource,Neutral,0,0
+07001,"Argus Security: Protection Guaranteed",Identity,Weyland,15,0
+07002,"Gagarin Deep Space: Expanding the Horizon",Identity,Weyland,15,0
+07003,"Titan Transnational: Investing In Your Future",Identity,Weyland,17,0
+07004,"Firmware Updates",Agenda,Weyland,0,1
+07005,"Glenn Station",Agenda,Weyland,0,2
+07006,"Government Takeover",Agenda,Weyland,0,6
+07007,"High-Risk Investment",Agenda,Weyland,0,3
+07008,"Constellation Protocol",Asset,Weyland,2,0
+07009,"Mark Yale",Asset,Weyland,1,0
+07010,"Space Camp",Asset,Weyland,1,0
+07011,"The Board",Asset,Weyland,5,0
+07012,"Asteroid Belt",ICE,Weyland,2,0
+07013,"Wormhole",ICE,Weyland,2,0
+07014,"Nebula",ICE,Weyland,2,0
+07015,"Orion",ICE,Weyland,3,0
+07016,"Builder",ICE,Weyland,1,0
+07017,"Checkpoint",ICE,Weyland,2,0
+07018,"Fire Wall",ICE,Weyland,2,0
+07019,"Searchlight",ICE,Weyland,1,0
+07020,"Housekeeping",Operation,Weyland,3,0
+07021,"Patch",Operation,Weyland,2,0
+07022,"Traffic Accident",Operation,Weyland,1,0
+07023,"Satellite Grid",Upgrade,Weyland,3,0
+07024,"The Twins",Upgrade,Weyland,1,0
+07025,"Sub Boost",Operation,Neutral,0,0
+07026,"Dedicated Technician Team",Upgrade,Neutral,0,0
+07027,"Cyberdex Virus Suite",Upgrade,Neutral,0,0
+07028,"Edward Kim: Humanity's Hammer",Identity,Anarch,15,0
+07029,"MaxX: Maximum Punk Rock",Identity,Anarch,15,0
+07030,"Valencia Estevez: The Angel of Cayambe",Identity,Anarch,15,0
+07031,"Amped Up",Event,Anarch,3,0
+07032,"I've Had Worse",Event,Anarch,2,0
+07033,"Itinerant Protesters",Event,Anarch,2,0
+07034,"Showing Off",Event,Anarch,3,0
+07035,"Wanton Destruction",Event,Anarch,4,0
+07036,"Day Job",Event,Anarch,1,0
+07037,"Forked",Event,Anarch,3,0
+07038,"Knifed",Event,Anarch,3,0
+07039,"Spooned",Event,Anarch,3,0
+07040,"Eater",Program,Anarch,3,0
+07041,"Gravedigger",Program,Anarch,2,0
+07042,"Hivemind",Program,Anarch,5,0
+07043,"Progenitor",Program,Anarch,2,0
+07044,"Archives Interface",Hardware,Anarch,2,0
+07045,"Chop Bot 3000",Hardware,Anarch,1,0
+07046,"MemStrips",Hardware,Anarch,2,0
+07047,"Vigil",Hardware,Anarch,2,0
+07048,"Human First",Resource,Anarch,2,0
+07049,"Investigative Journalism",Resource,Anarch,1,0
+07050,"Sacrificial Clone",Resource,Anarch,4,0
+07051,"Stim Dealer",Resource,Anarch,3,0
+07052,"Virus Breeding Ground",Resource,Anarch,2,0
+07053,"Uninstall",Event,Neutral,0,0
+07054,"Qianju PT",Hardware,Neutral,0,0
+07055,"Data Folding",Resource,Neutral,0,0
