@@ -8,6 +8,9 @@ namespace NetRunnerDBScrapper
 {
     public class Card
     {
+        /// <summary>
+        /// An enum representing the Faction of a card
+        /// </summary>
         public enum FactionEnum 
         { 
             Neutral = 0, 
@@ -20,6 +23,9 @@ namespace NetRunnerDBScrapper
             Weyland = 7
         }
 
+        /// <summary>
+        /// An enum representing the type of a card
+        /// </summary>
         public enum CardTypeEnum
         {
             INVALID = -1,
@@ -35,7 +41,20 @@ namespace NetRunnerDBScrapper
             Upgrade
         }
 
-        //Formatters
+        /// <summary>
+        /// Returns a bool representing whether Card Data has been loaded
+        /// </summary>
+        public static bool Loaded
+        {
+            get
+            {
+                return CARD_DATA_LOADED;
+            }
+        }
+
+        /// <summary>
+        /// Returns a ``pretty'' string representing this card's Type
+        /// </summary>
         public string TypeString
         {
             get
@@ -44,6 +63,9 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Returns a ``pretty'' string representing this card's Faction
+        /// </summary>
         public string FactionString
         {
             get
@@ -52,6 +74,9 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Returns a ``pretty'' string representing this card's Side
+        /// </summary>
         public string SideString
         {
             get
@@ -67,10 +92,19 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// The number of times this card has been seen in all decks
+        /// </summary>
         public int OccuranceCount { get; set; }
 
+        /// <summary>
+        /// The number of decks which include this card
+        /// </summary>
         public int DeckInclusionCount { get; set; }
 
+        /// <summary>
+        /// The average number of this card in all decks which have at least one of this card
+        /// </summary>
         public float Multiplicity
         {
             get
@@ -79,32 +113,60 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// The percentage of decks which include this card
+        /// </summary>
         public float PercentDeckInclusion { get { return ((float)DeckInclusionCount / (float)Decklist.DECKLISTLIST.Count()) * 100; } }
 
         public static Dictionary<int, Card> CARDLIST = new Dictionary<int, Card>();
         private static bool CARD_DATA_LOADED = false;
 
+        /// <summary>
+        /// The ID of this card
+        /// </summary>
         public int ID { get; set; }
 
+        /// <summary>
+        /// The name of this card
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// The type of this card
+        /// </summary>
         public CardTypeEnum CardType { get; set; }
 
+        /// <summary>
+        /// The faction of this card
+        /// </summary>
         public FactionEnum Faction { get; set; }
 
+        /// <summary>
+        /// The number of Agenda points on this card
+        /// </summary>
         public int AgendaPoints { get; set; }
 
+        /// <summary>
+        /// The maximum number of this card that can be included in a deck
+        /// </summary>
         public int MaxNumPerDeck { get; set; }
 
+        /// <summary>
+        /// The number of Cards currently loaded
+        /// </summary>
         public static int LoadedCardCount { get { return Card.CARDLIST.Count(); } }
 
+        /// <summary>
+        /// Method to load Card data
+        /// </summary>
+        /// <param name="datapath"></param>
         public static void LoadCardData(string datapath)
         {
             if (!Card.CARD_DATA_LOADED)
             {
                 if (!System.IO.File.Exists(datapath))
                 {
-                    throw new ApplicationException("Invalid path - " + datapath);
+                    return;
                 }
 
                 Microsoft.VisualBasic.FileIO.TextFieldParser reader = new Microsoft.VisualBasic.FileIO.TextFieldParser(datapath);
@@ -159,6 +221,11 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Retrieves a Card from the store by ID
+        /// </summary>
+        /// <param name="cardId"></param>
+        /// <returns></returns>
         public static Card GetCard(int cardId)
         {
             if(CARDLIST.Any(x => x.Key == cardId))
@@ -171,6 +238,9 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Determines if this card is a Corp card or not
+        /// </summary>
         public bool IsCorp 
         {
             get
@@ -198,8 +268,16 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// The amount of influence this card costs
+        /// </summary>
         public int Influence { get; set; }
 
+        /// <summary>
+        /// Determines if this card costs influence for the provided faction
+        /// </summary>
+        /// <param name="identityFaction">The faction to use to check influence cost</param>
+        /// <returns>True if this card costs influence for identityFaction</returns>
         public bool CostsInfluence(FactionEnum identityFaction)
         {
             if(Influence <= 0)
@@ -212,6 +290,10 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// An overried to ensure that Cards look pretty when I .ToString() them
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return string.Format("{0} ({1})", Name, ID);

@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBoxNSetGeneration = new System.Windows.Forms.GroupBox();
@@ -63,6 +58,14 @@
             this.comboBoxStatsMode = new System.Windows.Forms.ComboBox();
             this.buttonPredictDeck = new System.Windows.Forms.Button();
             this.dataGridViewCardData = new System.Windows.Forms.DataGridView();
+            this.ColumnCardDataID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataFaction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataSide = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataInfluence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataAgendaPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCardDataMaxNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCurrentDecklist = new System.Windows.Forms.DataGridView();
             this.ColumnRemoveCard = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnCardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,13 +92,6 @@
             this.ColumnCardMetaDataOccurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCardMetaDataDeckInclusionPercent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCardMetaDataMultiplicity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPageNSetData = new System.Windows.Forms.TabPage();
-            this.dataGridViewNSetData = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAontoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBontoA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,14 +103,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxPredictionMethod = new System.Windows.Forms.ComboBox();
-            this.ColumnCardDataID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataFaction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataSide = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataInfluence = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataAgendaPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCardDataMaxNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.groupBoxNSetGeneration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumLikes)).BeginInit();
@@ -132,8 +120,6 @@
             this.tabPage1.SuspendLayout();
             this.tabPageCardData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCardMetaData)).BeginInit();
-            this.tabPageNSetData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNSetData)).BeginInit();
             this.menuStrip3.SuspendLayout();
             this.groupBoxDeckPrediction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDeckSize)).BeginInit();
@@ -145,7 +131,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 703);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1120, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1458, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -172,7 +158,7 @@
             this.groupBoxNSetGeneration.Controls.Add(this.buttonGenNSets);
             this.groupBoxNSetGeneration.Location = new System.Drawing.Point(12, 27);
             this.groupBoxNSetGeneration.Name = "groupBoxNSetGeneration";
-            this.groupBoxNSetGeneration.Size = new System.Drawing.Size(367, 105);
+            this.groupBoxNSetGeneration.Size = new System.Drawing.Size(705, 105);
             this.groupBoxNSetGeneration.TabIndex = 4;
             this.groupBoxNSetGeneration.TabStop = false;
             this.groupBoxNSetGeneration.Text = "n-Set Generation";
@@ -325,9 +311,87 @@
             this.dataGridViewCardData.ReadOnly = true;
             this.dataGridViewCardData.RowHeadersVisible = false;
             this.dataGridViewCardData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCardData.Size = new System.Drawing.Size(540, 503);
+            this.dataGridViewCardData.Size = new System.Drawing.Size(708, 503);
             this.dataGridViewCardData.TabIndex = 5;
             this.dataGridViewCardData.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridViewCardData_MouseDown);
+            // 
+            // ColumnCardDataID
+            // 
+            this.ColumnCardDataID.DataPropertyName = "ID";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardDataID.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnCardDataID.HeaderText = "ID";
+            this.ColumnCardDataID.Name = "ColumnCardDataID";
+            this.ColumnCardDataID.ReadOnly = true;
+            this.ColumnCardDataID.Width = 43;
+            // 
+            // ColumnCardDataName
+            // 
+            this.ColumnCardDataName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnCardDataName.DataPropertyName = "Name";
+            this.ColumnCardDataName.HeaderText = "Name";
+            this.ColumnCardDataName.Name = "ColumnCardDataName";
+            this.ColumnCardDataName.ReadOnly = true;
+            // 
+            // ColumnCardDataType
+            // 
+            this.ColumnCardDataType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnCardDataType.DataPropertyName = "TypeString";
+            this.ColumnCardDataType.HeaderText = "Type";
+            this.ColumnCardDataType.Name = "ColumnCardDataType";
+            this.ColumnCardDataType.ReadOnly = true;
+            this.ColumnCardDataType.Width = 56;
+            // 
+            // ColumnCardDataFaction
+            // 
+            this.ColumnCardDataFaction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnCardDataFaction.DataPropertyName = "FactionString";
+            this.ColumnCardDataFaction.HeaderText = "Faction";
+            this.ColumnCardDataFaction.Name = "ColumnCardDataFaction";
+            this.ColumnCardDataFaction.ReadOnly = true;
+            this.ColumnCardDataFaction.Width = 67;
+            // 
+            // ColumnCardDataSide
+            // 
+            this.ColumnCardDataSide.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnCardDataSide.DataPropertyName = "SideString";
+            this.ColumnCardDataSide.HeaderText = "Side";
+            this.ColumnCardDataSide.Name = "ColumnCardDataSide";
+            this.ColumnCardDataSide.ReadOnly = true;
+            this.ColumnCardDataSide.Width = 53;
+            // 
+            // ColumnCardDataInfluence
+            // 
+            this.ColumnCardDataInfluence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnCardDataInfluence.DataPropertyName = "Influence";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardDataInfluence.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColumnCardDataInfluence.HeaderText = "Influence";
+            this.ColumnCardDataInfluence.Name = "ColumnCardDataInfluence";
+            this.ColumnCardDataInfluence.ReadOnly = true;
+            this.ColumnCardDataInfluence.Width = 76;
+            // 
+            // ColumnCardDataAgendaPoints
+            // 
+            this.ColumnCardDataAgendaPoints.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnCardDataAgendaPoints.DataPropertyName = "AgendaPoints";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardDataAgendaPoints.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColumnCardDataAgendaPoints.HeaderText = "Agenda";
+            this.ColumnCardDataAgendaPoints.Name = "ColumnCardDataAgendaPoints";
+            this.ColumnCardDataAgendaPoints.ReadOnly = true;
+            this.ColumnCardDataAgendaPoints.Width = 69;
+            // 
+            // ColumnCardDataMaxNum
+            // 
+            this.ColumnCardDataMaxNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnCardDataMaxNum.DataPropertyName = "MaxNumPerDeck";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardDataMaxNum.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColumnCardDataMaxNum.HeaderText = "Max";
+            this.ColumnCardDataMaxNum.Name = "ColumnCardDataMaxNum";
+            this.ColumnCardDataMaxNum.ReadOnly = true;
+            this.ColumnCardDataMaxNum.Width = 52;
             // 
             // dataGridViewCurrentDecklist
             // 
@@ -347,7 +411,7 @@
             this.dataGridViewCurrentDecklist.ReadOnly = true;
             this.dataGridViewCurrentDecklist.RowHeadersVisible = false;
             this.dataGridViewCurrentDecklist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCurrentDecklist.Size = new System.Drawing.Size(538, 506);
+            this.dataGridViewCurrentDecklist.Size = new System.Drawing.Size(708, 506);
             this.dataGridViewCurrentDecklist.TabIndex = 6;
             this.dataGridViewCurrentDecklist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCurrentDecklist_CellContentClick);
             this.dataGridViewCurrentDecklist.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewCurrentDecklist_DragDrop);
@@ -364,8 +428,8 @@
             // ColumnCardName
             // 
             this.ColumnCardName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ColumnCardName.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ColumnCardName.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnCardName.HeaderText = "Name";
             this.ColumnCardName.Name = "ColumnCardName";
             this.ColumnCardName.ReadOnly = true;
@@ -373,8 +437,8 @@
             // ColumnQuantity
             // 
             this.ColumnQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnQuantity.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnQuantity.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnQuantity.HeaderText = "Quantity";
             this.ColumnQuantity.Name = "ColumnQuantity";
             this.ColumnQuantity.ReadOnly = true;
@@ -383,10 +447,10 @@
             // ColumnTrust
             // 
             this.ColumnTrust.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.Format = "N2";
-            dataGridViewCellStyle39.NullValue = null;
-            this.ColumnTrust.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.ColumnTrust.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnTrust.HeaderText = "Trust";
             this.ColumnTrust.Name = "ColumnTrust";
             this.ColumnTrust.ReadOnly = true;
@@ -407,8 +471,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewCurrentDecklist);
             this.splitContainer1.Panel2.Controls.Add(this.menuStrip2);
-            this.splitContainer1.Size = new System.Drawing.Size(1082, 530);
-            this.splitContainer1.SplitterDistance = 540;
+            this.splitContainer1.Size = new System.Drawing.Size(1420, 530);
+            this.splitContainer1.SplitterDistance = 708;
             this.splitContainer1.TabIndex = 7;
             // 
             // menuStrip1
@@ -418,7 +482,7 @@
             this.toolStripTextBoxSearchFilter});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(540, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(708, 27);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -454,7 +518,7 @@
             this.toolStripMenuItemCurrentAgendaPoints});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(538, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(708, 24);
             this.menuStrip2.TabIndex = 7;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -475,13 +539,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPageCardData);
-            this.tabControl1.Controls.Add(this.tabPageNSetData);
             this.tabControl1.Location = new System.Drawing.Point(12, 138);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1096, 562);
+            this.tabControl1.Size = new System.Drawing.Size(1434, 562);
             this.tabControl1.TabIndex = 8;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            //this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -489,7 +552,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1088, 536);
+            this.tabPage1.Size = new System.Drawing.Size(1426, 536);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Deck Modeller";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -500,7 +563,7 @@
             this.tabPageCardData.Location = new System.Drawing.Point(4, 22);
             this.tabPageCardData.Name = "tabPageCardData";
             this.tabPageCardData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCardData.Size = new System.Drawing.Size(1088, 536);
+            this.tabPageCardData.Size = new System.Drawing.Size(1426, 536);
             this.tabPageCardData.TabIndex = 2;
             this.tabPageCardData.Text = "Card Data";
             this.tabPageCardData.UseVisualStyleBackColor = true;
@@ -528,7 +591,7 @@
             this.dataGridViewCardMetaData.ReadOnly = true;
             this.dataGridViewCardMetaData.RowHeadersVisible = false;
             this.dataGridViewCardMetaData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCardMetaData.Size = new System.Drawing.Size(1082, 530);
+            this.dataGridViewCardMetaData.Size = new System.Drawing.Size(1420, 530);
             this.dataGridViewCardMetaData.TabIndex = 6;
             // 
             // ColumnCardMetaDataName
@@ -570,8 +633,8 @@
             // 
             this.ColumnCardMetaDataInfluence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCardMetaDataInfluence.DataPropertyName = "Influence";
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardMetaDataInfluence.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardMetaDataInfluence.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColumnCardMetaDataInfluence.HeaderText = "Influence";
             this.ColumnCardMetaDataInfluence.Name = "ColumnCardMetaDataInfluence";
             this.ColumnCardMetaDataInfluence.ReadOnly = true;
@@ -581,8 +644,8 @@
             // 
             this.ColumnCardMetaDataAgenda.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCardMetaDataAgenda.DataPropertyName = "AgendaPoints";
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardMetaDataAgenda.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardMetaDataAgenda.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColumnCardMetaDataAgenda.HeaderText = "Agenda";
             this.ColumnCardMetaDataAgenda.Name = "ColumnCardMetaDataAgenda";
             this.ColumnCardMetaDataAgenda.ReadOnly = true;
@@ -592,8 +655,8 @@
             // 
             this.ColumnCardMetaDataMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCardMetaDataMax.DataPropertyName = "MaxNumPerDeck";
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardMetaDataMax.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardMetaDataMax.DefaultCellStyle = dataGridViewCellStyle10;
             this.ColumnCardMetaDataMax.HeaderText = "Max";
             this.ColumnCardMetaDataMax.Name = "ColumnCardMetaDataMax";
             this.ColumnCardMetaDataMax.ReadOnly = true;
@@ -603,8 +666,8 @@
             // 
             this.ColumnCardMetaDataOccurance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCardMetaDataOccurance.DataPropertyName = "OccuranceCount";
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardMetaDataOccurance.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColumnCardMetaDataOccurance.DefaultCellStyle = dataGridViewCellStyle11;
             this.ColumnCardMetaDataOccurance.HeaderText = "Occurance";
             this.ColumnCardMetaDataOccurance.Name = "ColumnCardMetaDataOccurance";
             this.ColumnCardMetaDataOccurance.ReadOnly = true;
@@ -614,9 +677,9 @@
             // 
             this.ColumnCardMetaDataDeckInclusionPercent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCardMetaDataDeckInclusionPercent.DataPropertyName = "PercentDeckInclusion";
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle44.Format = "N3";
-            this.ColumnCardMetaDataDeckInclusionPercent.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Format = "N3";
+            this.ColumnCardMetaDataDeckInclusionPercent.DefaultCellStyle = dataGridViewCellStyle12;
             this.ColumnCardMetaDataDeckInclusionPercent.HeaderText = "DeckInclusion%";
             this.ColumnCardMetaDataDeckInclusionPercent.Name = "ColumnCardMetaDataDeckInclusionPercent";
             this.ColumnCardMetaDataDeckInclusionPercent.ReadOnly = true;
@@ -626,104 +689,13 @@
             // 
             this.ColumnCardMetaDataMultiplicity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnCardMetaDataMultiplicity.DataPropertyName = "Multiplicity";
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.Format = "N3";
-            this.ColumnCardMetaDataMultiplicity.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Format = "N3";
+            this.ColumnCardMetaDataMultiplicity.DefaultCellStyle = dataGridViewCellStyle13;
             this.ColumnCardMetaDataMultiplicity.HeaderText = "Multiplicity";
             this.ColumnCardMetaDataMultiplicity.Name = "ColumnCardMetaDataMultiplicity";
             this.ColumnCardMetaDataMultiplicity.ReadOnly = true;
             this.ColumnCardMetaDataMultiplicity.Width = 80;
-            // 
-            // tabPageNSetData
-            // 
-            this.tabPageNSetData.Controls.Add(this.dataGridViewNSetData);
-            this.tabPageNSetData.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNSetData.Name = "tabPageNSetData";
-            this.tabPageNSetData.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNSetData.Size = new System.Drawing.Size(1088, 536);
-            this.tabPageNSetData.TabIndex = 1;
-            this.tabPageNSetData.Text = "N-Set Data";
-            this.tabPageNSetData.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewNSetData
-            // 
-            this.dataGridViewNSetData.AllowDrop = true;
-            this.dataGridViewNSetData.AllowUserToAddRows = false;
-            this.dataGridViewNSetData.AllowUserToResizeRows = false;
-            this.dataGridViewNSetData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewNSetData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNSetData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.ColumnAontoB,
-            this.ColumnBontoA});
-            this.dataGridViewNSetData.Location = new System.Drawing.Point(9, 6);
-            this.dataGridViewNSetData.Name = "dataGridViewNSetData";
-            this.dataGridViewNSetData.ReadOnly = true;
-            this.dataGridViewNSetData.RowHeadersVisible = false;
-            this.dataGridViewNSetData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewNSetData.Size = new System.Drawing.Size(1076, 556);
-            this.dataGridViewNSetData.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CardAName";
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle46;
-            this.dataGridViewTextBoxColumn3.HeaderText = "A";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "CardBName";
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle47;
-            this.dataGridViewTextBoxColumn4.HeaderText = "B";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 39;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Count";
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle48.Format = "N0";
-            dataGridViewCellStyle48.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle48;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Count";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 60;
-            // 
-            // ColumnAontoB
-            // 
-            this.ColumnAontoB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnAontoB.DataPropertyName = "AontoB";
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle49.Format = "N2";
-            this.ColumnAontoB.DefaultCellStyle = dataGridViewCellStyle49;
-            this.ColumnAontoB.HeaderText = "AontoB";
-            this.ColumnAontoB.Name = "ColumnAontoB";
-            this.ColumnAontoB.ReadOnly = true;
-            this.ColumnAontoB.Width = 67;
-            // 
-            // ColumnBontoA
-            // 
-            this.ColumnBontoA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnBontoA.DataPropertyName = "BontoA";
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle50.Format = "N2";
-            this.ColumnBontoA.DefaultCellStyle = dataGridViewCellStyle50;
-            this.ColumnBontoA.HeaderText = "BontoA";
-            this.ColumnBontoA.Name = "ColumnBontoA";
-            this.ColumnBontoA.ReadOnly = true;
-            this.ColumnBontoA.Width = 67;
             // 
             // menuStrip3
             // 
@@ -732,7 +704,7 @@
             this.dataToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(1120, 24);
+            this.menuStrip3.Size = new System.Drawing.Size(1458, 24);
             this.menuStrip3.TabIndex = 9;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -836,89 +808,11 @@
             this.comboBoxPredictionMethod.Size = new System.Drawing.Size(241, 21);
             this.comboBoxPredictionMethod.TabIndex = 15;
             // 
-            // ColumnCardDataID
-            // 
-            this.ColumnCardDataID.DataPropertyName = "ID";
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardDataID.DefaultCellStyle = dataGridViewCellStyle51;
-            this.ColumnCardDataID.HeaderText = "ID";
-            this.ColumnCardDataID.Name = "ColumnCardDataID";
-            this.ColumnCardDataID.ReadOnly = true;
-            this.ColumnCardDataID.Width = 43;
-            // 
-            // ColumnCardDataName
-            // 
-            this.ColumnCardDataName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnCardDataName.DataPropertyName = "Name";
-            this.ColumnCardDataName.HeaderText = "Name";
-            this.ColumnCardDataName.Name = "ColumnCardDataName";
-            this.ColumnCardDataName.ReadOnly = true;
-            // 
-            // ColumnCardDataType
-            // 
-            this.ColumnCardDataType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnCardDataType.DataPropertyName = "TypeString";
-            this.ColumnCardDataType.HeaderText = "Type";
-            this.ColumnCardDataType.Name = "ColumnCardDataType";
-            this.ColumnCardDataType.ReadOnly = true;
-            this.ColumnCardDataType.Width = 56;
-            // 
-            // ColumnCardDataFaction
-            // 
-            this.ColumnCardDataFaction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnCardDataFaction.DataPropertyName = "FactionString";
-            this.ColumnCardDataFaction.HeaderText = "Faction";
-            this.ColumnCardDataFaction.Name = "ColumnCardDataFaction";
-            this.ColumnCardDataFaction.ReadOnly = true;
-            this.ColumnCardDataFaction.Width = 67;
-            // 
-            // ColumnCardDataSide
-            // 
-            this.ColumnCardDataSide.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnCardDataSide.DataPropertyName = "SideString";
-            this.ColumnCardDataSide.HeaderText = "Side";
-            this.ColumnCardDataSide.Name = "ColumnCardDataSide";
-            this.ColumnCardDataSide.ReadOnly = true;
-            this.ColumnCardDataSide.Width = 53;
-            // 
-            // ColumnCardDataInfluence
-            // 
-            this.ColumnCardDataInfluence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnCardDataInfluence.DataPropertyName = "Influence";
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardDataInfluence.DefaultCellStyle = dataGridViewCellStyle52;
-            this.ColumnCardDataInfluence.HeaderText = "Influence";
-            this.ColumnCardDataInfluence.Name = "ColumnCardDataInfluence";
-            this.ColumnCardDataInfluence.ReadOnly = true;
-            this.ColumnCardDataInfluence.Width = 76;
-            // 
-            // ColumnCardDataAgendaPoints
-            // 
-            this.ColumnCardDataAgendaPoints.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnCardDataAgendaPoints.DataPropertyName = "AgendaPoints";
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardDataAgendaPoints.DefaultCellStyle = dataGridViewCellStyle53;
-            this.ColumnCardDataAgendaPoints.HeaderText = "Agenda";
-            this.ColumnCardDataAgendaPoints.Name = "ColumnCardDataAgendaPoints";
-            this.ColumnCardDataAgendaPoints.ReadOnly = true;
-            this.ColumnCardDataAgendaPoints.Width = 69;
-            // 
-            // ColumnCardDataMaxNum
-            // 
-            this.ColumnCardDataMaxNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnCardDataMaxNum.DataPropertyName = "MaxNumPerDeck";
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColumnCardDataMaxNum.DefaultCellStyle = dataGridViewCellStyle54;
-            this.ColumnCardDataMaxNum.HeaderText = "Max";
-            this.ColumnCardDataMaxNum.Name = "ColumnCardDataMaxNum";
-            this.ColumnCardDataMaxNum.ReadOnly = true;
-            this.ColumnCardDataMaxNum.Width = 52;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 725);
+            this.ClientSize = new System.Drawing.Size(1458, 725);
             this.Controls.Add(this.groupBoxDeckPrediction);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBoxNSetGeneration);
@@ -952,8 +846,6 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPageCardData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCardMetaData)).EndInit();
-            this.tabPageNSetData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNSetData)).EndInit();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
             this.groupBoxDeckPrediction.ResumeLayout(false);
@@ -979,14 +871,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemRemainingInfluence;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPageNSetData;
-        private System.Windows.Forms.DataGridView dataGridViewNSetData;
         private System.Windows.Forms.Button buttonGenNSets;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAontoB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBontoA;
         private System.Windows.Forms.TabPage tabPageCardData;
         private System.Windows.Forms.NumericUpDown numericUpDownNumLikes;
         private System.Windows.Forms.NumericUpDown numericUpDownNumComments;

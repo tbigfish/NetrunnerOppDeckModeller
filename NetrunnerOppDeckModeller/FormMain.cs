@@ -31,13 +31,16 @@ namespace NetRunnerDBScrapper
         private DELEGATE_W_STRING updateStatusDelegate;
         private DELEGATE_W_BOOL enableDisableControlsDelegate;
         private DELEGATE_W_BOOL enableDisableNSetControlsDelegate;
-        private DELEGATE_W_NOWT refreshNSetDGDelegate;
+        //private DELEGATE_W_NOWT refreshNSetDGDelegate;
         private DELEGATE_W_NOWT refreshCardMetaDataDGDelegate;
         private DELEGATE_W_LSTRING_STRING showDecklistDelegate;
 
         private BindingSortableList<Card> _currentDeckList = new BindingSortableList<Card>();
         private NSetCollection _nSetCollection = null;
-
+        
+        /// <summary>
+        /// An enum describing the deck predictio method
+        /// </summary>
         private enum DeckPredictionModeEnum 
         { 
             //Ordered chronologically
@@ -47,20 +50,28 @@ namespace NetRunnerDBScrapper
             PREDICTION_MODE_INFLUENCE_FILTERED
         }
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public FormMain()
         {
             InitializeComponent();
             this.dataGridViewCardData.AutoGenerateColumns = false;
             this.dataGridViewCurrentDecklist.AutoGenerateColumns = false;
-            this.dataGridViewNSetData.AutoGenerateColumns = false;
+            //this.dataGridViewNSetData.AutoGenerateColumns = false;
             updateStatusDelegate = new DELEGATE_W_STRING(_updateStatus);
             enableDisableControlsDelegate = new DELEGATE_W_BOOL(_enableDisableControls);
             enableDisableNSetControlsDelegate = new DELEGATE_W_BOOL(_enableDisableNSetControls);
-            refreshNSetDGDelegate = new DELEGATE_W_NOWT(_refreshNSetDataGridView);
+            //refreshNSetDGDelegate = new DELEGATE_W_NOWT(_refreshNSetDataGridView);
             refreshCardMetaDataDGDelegate = new DELEGATE_W_NOWT(_refreshCardMetaDataDGDelegate);
             showDecklistDelegate = new DELEGATE_W_LSTRING_STRING(_showDecklist);
         }
 
+        /// <summary>
+        /// Stops the HTMLAgilityPack from screwing up the parser when we do a datarip
+        /// </summary>
+        /// <param name="input">string to format</param>
+        /// <returns>Correctly formatted string</returns>
         private string FixHtmlAgilityPackBeingShit(string input)
         {
             input = input.Replace("Ã©", "é");
@@ -73,11 +84,19 @@ namespace NetRunnerDBScrapper
             return input;
         }
 
+        /// <summary>
+        /// Updates the status string on the bottom left of the main screen
+        /// </summary>
+        /// <param name="status">Text to set</param>
         private void _updateStatus(string status)
         {
             this.toolStripStatusLabel1.Text = status;
         }
 
+        /// <summary>
+        /// Updates (Invokes?) the status string on the bottom left of the main screen
+        /// </summary>
+        /// <param name="status">Text to set</param>
         private void UpdateStatus(string status)
         {
             if (InvokeRequired)
@@ -90,6 +109,10 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Sets the enabled status of the controls in both groupboxes
+        /// </summary>
+        /// <param name="enabled">Status to set</param>
         private void _enableDisableControls(bool enabled)
         {
             this.groupBoxNSetGeneration.Enabled = enabled;
@@ -98,6 +121,10 @@ namespace NetRunnerDBScrapper
             UpdateStatus("Ready");
         }
 
+        /// <summary>
+        /// Sets (Invokes?) the enabled status of the controls in both groupboxes
+        /// </summary>
+        /// <param name="enabled">Status to set</param>
         private void EnableDisableControls(bool enabled)
         {
             if (InvokeRequired)
@@ -110,9 +137,13 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Sets the enabled status of the controls in the NSet groupbox
+        /// </summary>
+        /// <param name="enabled">Status to set</param>
         private void _enableDisableNSetControls(bool enabled)
         {
-            if((Card.CARDLIST.Count() == 0) || (!Decklist.DECKLISTS_LOADED))
+            if((!Card.Loaded) || (!Decklist.Loaded))
             {
                 //Cards/Decks failed to load, abort
                 this.Close();
@@ -125,6 +156,10 @@ namespace NetRunnerDBScrapper
             UpdateStatus("Ready");
         }
 
+        /// <summary>
+        /// Sets (Invokes?) the enabled status of the controls in the NSet groupbox
+        /// </summary>
+        /// <param name="enabled">Status to set</param>
         private void EnableDisableNSetControls(bool enabled)
         {
             if (InvokeRequired)
@@ -137,6 +172,14 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Main method to generate 3-sets (which is a 2-set with an identity attached)
+        /// </summary>
+        /// <param name="minComments">Minimum number of comments each decklist requires to be included in this generation process</param>
+        /// <param name="minFavourites">Minimum number of favourites each decklist requires to be included in this generation process</param>
+        /// <param name="minLikes">Minimum number of likes each decklist requires to be included in this generation process</param>
+        /// <param name="distinctNSets">Call Distinct() on the decklist before generation begins</param>
+        /// <param name="selfNSets">All creation of n-Sets with duplicate items</param>
         private void GenerateTriSets(int minComments, int minFavourites, int minLikes, bool distinctNSets, bool selfNSets)
         {
             float counter = 0;
@@ -194,6 +237,14 @@ namespace NetRunnerDBScrapper
             EnableDisableControls(true);
         }
 
+        /// <summary>
+        /// Main method to generate 2-set
+        /// </summary>
+        /// <param name="minComments">Minimum number of comments each decklist requires to be included in this generation process</param>
+        /// <param name="minFavourites">Minimum number of favourites each decklist requires to be included in this generation process</param>
+        /// <param name="minLikes">Minimum number of likes each decklist requires to be included in this generation process</param>
+        /// <param name="distinctNSets">Call Distinct() on the decklist before generation begins</param>
+        /// <param name="selfNSets">All creation of n-Sets with duplicate items</param>
         private void GenerateBiSets(int minComments, int minFavourites, int minLikes, bool distinctNSets, bool selfNSets)
         {
             float counter = 0;
@@ -250,34 +301,18 @@ namespace NetRunnerDBScrapper
             EnableDisableControls(true);
         }
 
-        private void _refreshNSetDataGridView()
-        {
-            this.dataGridViewNSetData.DataSource = null;
-
-            if (_nSetCollection != null)
-            {
-                this.dataGridViewNSetData.DataSource = _nSetCollection.GetData();
-            }
-        }
-
-        private void RefreshNSetDataGridView()
-        {
-            if (this.InvokeRequired)
-            {
-                this.Invoke(refreshNSetDGDelegate, new object[] { }); ;
-            }
-            else
-            {
-                _refreshNSetDataGridView();
-            }
-        }
-
+        /// <summary>
+        /// Refresh the CardMetaDataDG
+        /// </summary>
         private void _refreshCardMetaDataDGDelegate()
         {
             this.dataGridViewCardMetaData.DataSource = null;
             this.dataGridViewCardMetaData.DataSource = new BindingSortableList<Card>(Card.CARDLIST.Values);
         }
 
+        /// <summary>
+        /// Refresh (Invoke?) the CardMetaDataDG
+        /// </summary>
         private void RefreshCardMetaDataGridView()
         {
             if (this.InvokeRequired)
@@ -290,6 +325,9 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Perform a card data scrape of the NetrunnerDB website. Downloads data on all cards.
+        /// </summary>
         private void CardDataScrape()
         {
             System.IO.StreamWriter writer = System.IO.File.CreateText(MAINDATAPATH + "NetRunnerCardData.csv");
@@ -416,6 +454,9 @@ namespace NetRunnerDBScrapper
             EnableDisableControls(true);
         }
 
+        /// <summary>
+        /// Perform a deck data scrape of the NetrunnerDB website. Downloads data from the number of pages specified by NUM_DECK_PAGES_SCRAPE.
+        /// </summary>
         private void DeckDataScrape()
         {
             List<Decklist> decks = new List<Decklist>();
@@ -511,11 +552,18 @@ namespace NetRunnerDBScrapper
             EnableDisableControls(true);
         }
 
+        /// <summary>
+        /// Gets the amount of unspent influence from the list stored in _currentDeckList
+        /// </summary>
+        /// <returns>An int representing the amount of unspent influence in _currentDeckList</returns>
         private int GetRemainingInfluenceFromCurrentDeck()
         {
             return Decklist.GetRemainingInfluence(this._currentDeckList.Single(x => x.CardType == Card.CardTypeEnum.Identity), this._currentDeckList.ToList());
         }
 
+        /// <summary>
+        /// Refreshes the DG holding the current decklist
+        /// </summary>
         private void RefreshCurrentDecklist()
         {
             this.SuspendLayout();
@@ -523,7 +571,7 @@ namespace NetRunnerDBScrapper
 
             foreach (var cardGroup in this._currentDeckList.GroupBy(x => x.ID))
             {
-                this.dataGridViewCurrentDecklist.Rows.Add(new object[] { "X", cardGroup.First().Name, _currentDeckList.Count(x => x.ID == cardGroup.Key), GetTrust(cardGroup.Key) });
+                this.dataGridViewCurrentDecklist.Rows.Add(new object[] { "X", cardGroup.First().Name, _currentDeckList.Count(x => x.ID == cardGroup.Key), null });
                 this.dataGridViewCurrentDecklist.Rows[this.dataGridViewCurrentDecklist.Rows.Count - 1].Tag = cardGroup.Key;
             }
 
@@ -572,11 +620,22 @@ namespace NetRunnerDBScrapper
             this.ResumeLayout();
         }
 
+        /// <summary>
+        /// Gets all cards which could be added to the currentDecklist.
+        /// </summary>
+        /// <param name="currentDecklist"></param>
+        /// <returns></returns>
         private List<int> GetAllowedCards(List<Card> currentDecklist)
         {
             return GetAllowedCards(currentDecklist, new List<Card>());
         }
 
+        /// <summary>
+        /// Gets all cards which could be added to the currentDecklist, skipping over banned cards.
+        /// </summary>
+        /// <param name="currentDecklist">Current decklist</param>
+        /// <param name="extBannedCards">Cards which will not be returned</param>
+        /// <returns>A list of ints representing Cards which could be added.</returns>
         private List<int> GetAllowedCards(List<Card> currentDecklist, List<Card> extBannedCards)
         {
             Card identity = currentDecklist.Single(x => x.CardType == Card.CardTypeEnum.Identity);
@@ -594,17 +653,24 @@ namespace NetRunnerDBScrapper
             return Card.CARDLIST.Values.Where(x => !bannedCards.Contains(x)).Select(x => x.ID).ToList();
         }
 
+        /// <summary>
+        /// Gets a Dictionary of Predictions, each with a value representing the magnitude of supporting data. 
+        /// </summary>
+        /// <param name="knownCards">The observed cards</param>
+        /// <param name="bannedCards">Cards which are banned from prediction</param>
+        /// <param name="byPercentage">Whether n-Sets should be considered by percentage of the whole set or by magnitude</param>
+        /// <returns></returns>
         private Dictionary<Card, int> GetPredictions(List<Card> knownCards, List<Card> bannedCards, bool byPercentage)
         {
             return GetPredictions(knownCards, bannedCards, byPercentage, null);
         }
 
         /// <summary>
-        /// 
+        /// Gets a Dictionary of Predictions, each with a value representing the magnitude of supporting data. 
         /// </summary>
-        /// <param name="knownCards"></param>
-        /// <param name="bannedCards"></param>
-        /// <param name="byPercentage"></param>
+        /// <param name="knownCards">The observed cards</param>
+        /// <param name="bannedCards">Cards which are banned from prediction</param>
+        /// <param name="byPercentage">Whether n-Sets should be considered by percentage of the whole set or by magnitude</param>
         /// <param name="influenceFilter">True = return only cards that used influence, False = return only cards that didn't use influence, null = return all</param>
         /// <returns></returns>
         private Dictionary<Card, int> GetPredictions(List<Card> knownCards, List<Card> bannedCards, bool byPercentage, bool? influenceFilter)
@@ -661,31 +727,11 @@ namespace NetRunnerDBScrapper
             return retVal;
         }
 
-        private float GetTrust(int targetCardId)
-        {
-            Card targetCard = Card.GetCard(targetCardId);
-
-            if (targetCard.CardType == Card.CardTypeEnum.Identity)
-            {
-                return 1;
-            }
-            else
-            {
-                float total = 0;
-                float counter = 0;
-
-                foreach (Card otherCard in this._currentDeckList.Where(x => x.ID != targetCardId)) //For each card in the decklist
-                {
-                    total += Decklist.DECKLISTLIST.Values.Count(x => (x.Identity.ID == otherCard.ID) || x.CardList.Any(y => y.ID == otherCard.ID));
-
-                    counter += Decklist.DECKLISTLIST.Values.Count(x => (x.CardList.Any(y => y.ID == otherCard.ID) || (x.Identity.ID == otherCard.ID))
-                        && ((x.CardList.Any(y => y.ID == targetCardId)) || (x.Identity.ID == targetCardId)));
-                }
-
-                return counter / total;
-            }
-        }
-
+        /// <summary>
+        /// OnLoad event. Sets various controls to starting values.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             this.comboBoxStatsMode.SelectedIndex = 0;
@@ -699,80 +745,11 @@ namespace NetRunnerDBScrapper
             this.comboBoxPredictionMethod.SelectedIndex = 0;
             this.toolStripComboBoxTypeFilter.SelectedIndex = 0;
             this.dataGridViewCardMetaData.AutoGenerateColumns = false;
-
-            ////Testing Decklist.GetRequiredAgendaPoints(int)
-            //for(int i = 40; i < 70; i++)
-            //{
-            //    int[] debug = Decklist.GetRequiredAgendaPoints(i);
-            //    Console.Out.WriteLine(String.Format("Deck Size: {0}, Min Agenda: {1}, Max Agenda: {2}", new object[] { i, debug[0], debug[1] }));
-            //}
         }
 
-        private void LoadDeckData()
-        {
-            if (!Decklist.DECKLISTS_LOADED)
-            {
-                string datapath = MAINDATAPATH + "NetRunnerDeckData.csv";
-
-                if (!System.IO.File.Exists(datapath))
-                {
-                    MessageBox.Show("Invalid data file: " + datapath);
-                    return;
-                }
-
-                Microsoft.VisualBasic.FileIO.TextFieldParser reader = new Microsoft.VisualBasic.FileIO.TextFieldParser(datapath);
-                reader.HasFieldsEnclosedInQuotes = true;
-                reader.SetDelimiters(",");
-
-                //System.IO.StreamReader reader = System.IO.File.OpenText(datapath);
-                //reader.ReadLine(); //First line is titles
-                string currentline = reader.ReadLine();
-
-                string[] fields;
-                Decklist currentDeckList = null;
-
-                while (!reader.EndOfData)
-                {
-                    fields = reader.ReadFields();
-                    int deckId, cardId, quantity, comments, favourites, likes = -1;
-                    string deckname = fields[1];
-
-                    if (!Int32.TryParse(fields[0], out deckId)
-                        || !Int32.TryParse(fields[2], out cardId)
-                        || !Int32.TryParse(fields[3], out quantity)
-                        || !Int32.TryParse(fields[4], out comments)
-                        || !Int32.TryParse(fields[5], out favourites)
-                        || !Int32.TryParse(fields[6], out likes))
-                    {
-                        throw new ApplicationException(string.Format("Parsing error - {0},{1},{2},{3},{4},{5},{6}", new object[] { fields[0], fields[1], fields[2], fields[3], fields[4], fields[5], fields[6] }));
-                    }
-
-                    if ((currentDeckList == null) || (currentDeckList.ID != deckId))
-                    {
-                        //Next deck
-                        currentDeckList = new Decklist(deckId, deckname);
-                        Decklist.AddDeck(currentDeckList);
-
-                        //The first card is the identity
-                        currentDeckList.Identity = Card.GetCard(cardId);
-                        currentDeckList.NumComments = comments;
-                        currentDeckList.NumFavourites = favourites;
-                        currentDeckList.NumLikes = likes;
-                    }
-                    else
-                    {
-                        //Add this card
-                        currentDeckList.AddCard(Card.GetCard(cardId), quantity);
-                    }
-
-                    //System.Diagnostics.Debug.Write(deckId + "," + cardId + "\r\n");
-                }
-
-                reader.Close();
-            }
-
-        }
-
+        /// <summary>
+        /// Refreshes the main Card DG
+        /// </summary>
         private void RefreshCardDataGridView()
         {
             this.dataGridViewCardData.DataSource = null;
@@ -816,6 +793,11 @@ namespace NetRunnerDBScrapper
             this.dataGridViewCardData.DataSource = cardData;
         }
 
+        /// <summary>
+        /// OnShown event. Loads the stored Data.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Shown(object sender, EventArgs e)
         {
             EnableDisableControls(false);
@@ -831,22 +813,22 @@ namespace NetRunnerDBScrapper
             newT.Start();
         }
 
+        /// <summary>
+        /// Loads all Card and Deck data
+        /// </summary>
         private void LoadData()
         {
-            UpdateStatus("Loading Card Data...");
-
-            string cardData = MAINDATAPATH + "NetRunnerCardData.csv";
-
-            if (!File.Exists(cardData))
-            {
-                return;
-            }
-
-            Card.LoadCardData(cardData);
-            LoadDeckData();
+            UpdateStatus("Loading Data...");
+            Card.LoadCardData(MAINDATAPATH + "NetRunnerCardData.csv");
+            Decklist.LoadDeckData(MAINDATAPATH + "NetRunnerDeckData.csv");
             EnableDisableNSetControls(true);
         }
 
+        /// <summary>
+        /// OnMouseDown event for the DragDrop process
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridViewCardData_MouseDown(object sender, MouseEventArgs e)
         {
             DataGridView.HitTestInfo info = dataGridViewCardData.HitTest(e.X, e.Y);
@@ -859,6 +841,11 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// OnDragEnter event for the DragDrop process
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridViewCurrentDecklist_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(int)))
@@ -875,12 +862,23 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Determines if text dropped on the Current Decklist DG represents a valid decklist
+        /// </summary>
+        /// <param name="data">A string (hopefully) representing a valid decklist</param>
+        /// <returns>True if the string represents a valid decklist</returns>
         private bool TextDataIsValid(string data)
         {
             int[] dontCare;
             return GetCardIdsFromText(data, out dontCare);
         }
 
+        /// <summary>
+        /// Attempts to extract a list of cards from block of csv
+        /// </summary>
+        /// <param name="data">A series of CSV representing card IDs</param>
+        /// <param name="rData">The output data</param>
+        /// <returns>True if the string represents a valid decklist</returns>
         private bool GetCardIdsFromText(string data, out int[] rData)
         {
             bool foundIdentity = false;
@@ -919,6 +917,11 @@ namespace NetRunnerDBScrapper
             return foundIdentity;
         }
 
+        /// <summary>
+        /// OnDragDrop event for the DragDrop process
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridViewCurrentDecklist_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(int)))
@@ -966,6 +969,11 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Card to process the "delete" button on the CurrentDecklist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridViewCurrentDecklist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if ((e.ColumnIndex == 0) && (e.RowIndex >= 0))
@@ -979,11 +987,21 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Refresh the CardDataDG because the search text changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripTextBoxSearchFilter_TextChanged(object sender, EventArgs e)
         {
             RefreshCardDataGridView();
         }
 
+        /// <summary>
+        /// Button to begin set generation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonGenNSets_Click(object sender, EventArgs e)
         {
             EnableDisableControls(false);
@@ -1000,6 +1018,11 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Update the display showing how many decklists will be included in the nSet generation, as we changed one of the filters
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numericUpDownNumStats_ValueChanged(object sender, EventArgs e)
         {
             this.labelNumDecks.Text = "Num Decks: " + Decklist.DECKLISTLIST.Count(x => (x.Value.NumComments >= this.numericUpDownNumComments.Value) && (x.Value.NumFavourites >= this.numericUpDownNumFavs.Value) && (x.Value.NumLikes >= this.numericUpDownNumLikes.Value));
@@ -1016,7 +1039,7 @@ namespace NetRunnerDBScrapper
             if (this._currentDeckList.Any(x => x.CardType == Card.CardTypeEnum.Identity))
             {
                 EnableDisableControls(false);
-                this.toolStripStatusLabel1.Text = "Predicting Whole Deck...";
+                this.toolStripStatusLabel1.Text = "Predicting Deck...";
 
                 bool usePercentages = (comboBoxStatsMode.SelectedIndex == 1);
                 int deckSize = (int)numericUpDownDeckSize.Value;
@@ -1032,6 +1055,11 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Creates, populates and displays a FormDecklist
+        /// </summary>
+        /// <param name="cardList">The list of cards to populate with</param>
+        /// <param name="message">Any relevant error message</param>
         private void _showDecklist(List<Card> cardList, string message)
         {
             FormDecklist newForm = new FormDecklist();
@@ -1042,6 +1070,11 @@ namespace NetRunnerDBScrapper
             this.EnableDisableControls(true);
         }
 
+        /// <summary>
+        /// (Invoke?) Creates, populates and displays a FormDecklist
+        /// </summary>
+        /// <param name="cardList">The list of cards to populate with</param>
+        /// <param name="message">Any relevant error message</param>
         private void ShowDecklist(List<Card> cardList, string message)
         {
             if (this.InvokeRequired)
@@ -1054,12 +1087,20 @@ namespace NetRunnerDBScrapper
             }
         }
 
-        private List<Card> PredictDeck_Default(List<Card> includedCards, bool usePercentages, int deckSize, out string message)
+        /// <summary>
+        /// The first gen of prediction algorithm (Prediction Method: Best Guess)
+        /// </summary>
+        /// <param name="observedCards">Cards already observed in the decklist</param>
+        /// <param name="usePercentages">Whether we should consider n-Sets by magnitude or by percentage of all n-Sets</param>
+        /// <param name="deckSize">The deck size we need to predict</param>
+        /// <param name="message">Out for any error message that may occur</param>
+        /// <returns>A list of cards representing the predicted deck</returns>
+        private List<Card> PredictDeck_Default(List<Card> observedCards, bool usePercentages, int deckSize, out string message)
         {
             List<Card> predictedDeck = new List<Card>();
             message = string.Empty;
-            predictedDeck.AddRange(includedCards);
-            var predictions = GetPredictions(includedCards, new List<Card>(), usePercentages).OrderByDescending(x => x.Value);
+            predictedDeck.AddRange(observedCards);
+            var predictions = GetPredictions(observedCards, new List<Card>(), usePercentages).OrderByDescending(x => x.Value);
 
             //If we're corp, add agendas first
             Card identity = predictedDeck.Single(x => x.CardType == Card.CardTypeEnum.Identity);
@@ -1067,7 +1108,7 @@ namespace NetRunnerDBScrapper
             if(identity.IsCorp)
             {
                 int[] requiredAgendaPoints = Decklist.GetRequiredAgendaPoints(deckSize);
-                int currentAgendaPoints = Decklist.GetAgendaPoints(includedCards);
+                int currentAgendaPoints = Decklist.GetAgendaPoints(observedCards);
                 int neededAgendaPoints = requiredAgendaPoints[0] - currentAgendaPoints;
 
                 if(currentAgendaPoints > requiredAgendaPoints[1])
@@ -1097,11 +1138,19 @@ namespace NetRunnerDBScrapper
             return predictedDeck;
         }
 
-        private List<Card> PredictDeck_CardMultiplicity(List<Card> includedCards, bool usePercentages, int deckSize, out string message)
+        /// <summary>
+        /// The second gen of prediction algorithm (Prediction Method: Card Multiplicity)
+        /// </summary>
+        /// <param name="observedCards">Cards already observed in the decklist</param>
+        /// <param name="usePercentages">Whether we should consider n-Sets by magnitude or by percentage of all n-Sets</param>
+        /// <param name="deckSize">The deck size we need to predict</param>
+        /// <param name="message">Out for any error message that may occur</param>
+        /// <returns>A list of cards representing the predicted deck</returns>
+        private List<Card> PredictDeck_CardMultiplicity(List<Card> observedCards, bool usePercentages, int deckSize, out string message)
         {
             List<Card> predictedDeck = new List<Card>();
             message = string.Empty;
-            predictedDeck.AddRange(includedCards);
+            predictedDeck.AddRange(observedCards);
             List<Card> bannedCards = new List<Card>();
             Card identity = predictedDeck.Single(x => x.CardType == Card.CardTypeEnum.Identity);
 
@@ -1111,7 +1160,7 @@ namespace NetRunnerDBScrapper
             if(identity.IsCorp)
             {
                 int[] requiredAgendaPoints = Decklist.GetRequiredAgendaPoints(deckSize);
-                int currentAgendaPoints = Decklist.GetAgendaPoints(includedCards);
+                int currentAgendaPoints = Decklist.GetAgendaPoints(observedCards);
                 int neededAgendaPoints = requiredAgendaPoints[0] - currentAgendaPoints;
 
                 if(currentAgendaPoints > requiredAgendaPoints[1])
@@ -1190,11 +1239,19 @@ namespace NetRunnerDBScrapper
             return predictedDeck;
         }
 
-        private List<Card> PredictDeck_InfluencePrioritised(List<Card> includedCards, bool usePercentages, int deckSize, out string message)
+        /// <summary>
+        /// The third gen of prediction algorithm (Prediction Method: Influence Prioritised)
+        /// </summary>
+        /// <param name="observedCards">Cards already observed in the decklist</param>
+        /// <param name="usePercentages">Whether we should consider n-Sets by magnitude or by percentage of all n-Sets</param>
+        /// <param name="deckSize">The deck size we need to predict</param>
+        /// <param name="message">Out for any error message that may occur</param>
+        /// <returns>A list of cards representing the predicted deck</returns>
+        private List<Card> PredictDeck_InfluencePrioritised(List<Card> observedCards, bool usePercentages, int deckSize, out string message)
         {
             List<Card> predictedDeck = new List<Card>();
             message = string.Empty;
-            predictedDeck.AddRange(includedCards);
+            predictedDeck.AddRange(observedCards);
             List<Card> bannedCards = new List<Card>();
             Card identity = predictedDeck.Single(x => x.CardType == Card.CardTypeEnum.Identity);
 
@@ -1204,7 +1261,7 @@ namespace NetRunnerDBScrapper
             if (identity.IsCorp)
             {
                 int[] requiredAgendaPoints = Decklist.GetRequiredAgendaPoints(deckSize);
-                int currentAgendaPoints = Decklist.GetAgendaPoints(includedCards);
+                int currentAgendaPoints = Decklist.GetAgendaPoints(observedCards);
                 int neededAgendaPoints = requiredAgendaPoints[0] - currentAgendaPoints;
 
                 if (currentAgendaPoints > requiredAgendaPoints[1])
@@ -1291,11 +1348,19 @@ namespace NetRunnerDBScrapper
             return predictedDeck;
         }
 
-        private List<Card> PredictDeck_InfluenceFiltered(List<Card> includedCards, bool usePercentages, int deckSize, out string message)
+        /// <summary>
+        /// The fourth gen of prediction algorithm (Prediction Method: Influence Filtered)
+        /// </summary>
+        /// <param name="observedCards">Cards already observed in the decklist</param>
+        /// <param name="usePercentages">Whether we should consider n-Sets by magnitude or by percentage of all n-Sets</param>
+        /// <param name="deckSize">The deck size we need to predict</param>
+        /// <param name="message">Out for any error message that may occur</param>
+        /// <returns>A list of cards representing the predicted deck</returns>
+        private List<Card> PredictDeck_InfluenceFiltered(List<Card> observedCards, bool usePercentages, int deckSize, out string message)
         {
             List<Card> predictedDeck = new List<Card>();
             message = string.Empty;
-            predictedDeck.AddRange(includedCards);
+            predictedDeck.AddRange(observedCards);
             List<Card> bannedCards = new List<Card>();
             Card identity = predictedDeck.Single(x => x.CardType == Card.CardTypeEnum.Identity);
 
@@ -1306,7 +1371,7 @@ namespace NetRunnerDBScrapper
             if (identity.IsCorp)
             {
                 int[] requiredAgendaPoints = Decklist.GetRequiredAgendaPoints(deckSize);
-                int currentAgendaPoints = Decklist.GetAgendaPoints(includedCards);
+                int currentAgendaPoints = Decklist.GetAgendaPoints(observedCards);
                 int neededAgendaPoints = requiredAgendaPoints[0] - currentAgendaPoints;
 
                 if (currentAgendaPoints > requiredAgendaPoints[1])
@@ -1411,7 +1476,16 @@ namespace NetRunnerDBScrapper
             return predictedDeck;
         }
 
-        private void PredictDeck(DeckPredictionModeEnum mode, List<Card> includedCards, bool usePercentages, int deckSize)
+        /// <summary>
+        /// Switch method for PredictionMode
+        /// </summary>
+        /// <param name="mode">The prediction mode to use</param>
+        /// <param name="observedCards">Cards already observed in the decklist</param>
+        /// <param name="usePercentages">Whether we should consider n-Sets by magnitude or by percentage of all n-Sets</param>
+        /// <param name="deckSize">The deck size we need to predict</param>
+        /// <param name="message">Out for any error message that may occur</param>
+        /// <returns>A list of cards representing the predicted deck</returns>
+        private void PredictDeck(DeckPredictionModeEnum mode, List<Card> observedCards, bool usePercentages, int deckSize)
         {
             List<Card> predictedDeck = null;
             string message = string.Empty;
@@ -1419,16 +1493,16 @@ namespace NetRunnerDBScrapper
             switch (mode)
             {
                 case DeckPredictionModeEnum.PREDICTION_MODE_BEST_GUESS:
-                    predictedDeck = PredictDeck_Default(includedCards, usePercentages, deckSize, out message);
+                    predictedDeck = PredictDeck_Default(observedCards, usePercentages, deckSize, out message);
                     break;
                 case DeckPredictionModeEnum.PREDICTION_MODE_CARD_MULTIPLICITY:
-                    predictedDeck = PredictDeck_CardMultiplicity(includedCards, usePercentages, deckSize, out message);
+                    predictedDeck = PredictDeck_CardMultiplicity(observedCards, usePercentages, deckSize, out message);
                     break;
                 case DeckPredictionModeEnum.PREDICTION_MODE_INFLUENCE_PRIORITISED:
-                    predictedDeck = PredictDeck_InfluencePrioritised(includedCards, usePercentages, deckSize, out message);
+                    predictedDeck = PredictDeck_InfluencePrioritised(observedCards, usePercentages, deckSize, out message);
                     break;
                 case DeckPredictionModeEnum.PREDICTION_MODE_INFLUENCE_FILTERED:
-                    predictedDeck = PredictDeck_InfluenceFiltered(includedCards, usePercentages, deckSize, out message);
+                    predictedDeck = PredictDeck_InfluenceFiltered(observedCards, usePercentages, deckSize, out message);
                     break;
                 default:
                     throw new NotImplementedException("Unknown Prediction Method");
@@ -1437,7 +1511,12 @@ namespace NetRunnerDBScrapper
             ShowDecklist(predictedDeck, message);
         }
 
-
+        /// <summary>
+        /// Gets a string representing the content of a decklist
+        /// </summary>
+        /// <param name="cardlist">The cards in the decklist</param>
+        /// <param name="initialList">The observed cards in the decklist</param>
+        /// <returns>A string representing the content of a decklist</returns>
         private string GetDeckString(ref List<Card> cardlist, ref List<Card> initialList)
         {
             StringBuilder sb = new StringBuilder();
@@ -1466,6 +1545,14 @@ namespace NetRunnerDBScrapper
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Helper function used by GetDeckString(ref string, ref List<Card>)
+        /// </summary>
+        /// <param name="identity">The deck's identity card</param>
+        /// <param name="currentCard">The card to write this line for</param>
+        /// <param name="numPresent">The number of currentCard in the deck</param>
+        /// <param name="numObserved">The number of currentCard observed in the deck</param>
+        /// <returns></returns>
         private static string GetDecklistLine(Card identity, Card currentCard, int numPresent, int numObserved)
         {
             string line = string.Empty;
@@ -1476,11 +1563,13 @@ namespace NetRunnerDBScrapper
             }
             else
             {
+                //It's not an identity, so write the quantity
                 line = string.Format("{0} x {1}", numPresent, currentCard.Name);
             }
 
             if (currentCard.CostsInfluence(identity.Faction))
             {
+                //Do Latex formatting stuff to show bulletpoints
                 line += " (*@$";
                 for (int i = 0; i < currentCard.Influence; i++)
                 {
@@ -1492,11 +1581,17 @@ namespace NetRunnerDBScrapper
 
             if (numObserved > 0)
             {
+                //Some are observed, so mark this with squarebrackets
                 line += string.Format(" [{0}]", numObserved);
             }
             return line;
         }
 
+        /// <summary>
+        /// Menu Item to scrape card data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cardDataScrapeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Running data scrape operations will overwrite the shipped data included in this app. Not recommended!", "WARNING: Overwriting Data!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -1509,6 +1604,11 @@ namespace NetRunnerDBScrapper
             }
         }
 
+        /// <summary>
+        /// Menu item to scrape deck data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void deckDataScapeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Running data scrape operations will overwrite the shipped data included in this app. Not recommended!", "WARNING: Overwriting Data!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -1518,14 +1618,6 @@ namespace NetRunnerDBScrapper
                 EnableDisableControls(false);
                 Thread newT = new Thread(new ThreadStart(DeckDataScrape));
                 newT.Start();
-            }
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(this.tabControl1.SelectedIndex == 2)
-            {
-                RefreshNSetDataGridView();
             }
         }
     }
